@@ -1,0 +1,22 @@
+body {
+    background-color: #bdffa6;
+}
+
+.header {
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    position: absolute;
+}
+#header-h {
+    position: relative;
+    font-size: 60px;
+}
+
+.commands {
+    margin-top: 100px;
+    margin-left: 50px;
+    font-family: Arial;
+    float: left;
+}
