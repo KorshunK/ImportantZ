@@ -1,0 +1,26 @@
+#languageSwitcher {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.ru_lang_btn, .en_lang_btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.ru_lang_btn {
+    margin-left: 15px;
+}
