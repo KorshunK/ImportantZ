@@ -1,3 +1,4 @@
+
 body {
     background-color: #bdffa6;
 }
@@ -15,8 +16,21 @@ body {
 }
 
 .commands {
-    margin-top: 100px;
-    margin-left: 50px;
     font-family: Arial;
     float: left;
+    width: 100%;
+    height: auto;
+}
+
+.config * {
+    font-size: 18px;
+    text-align: left;
+}
+
+#config-img {
+    margin-top: 80px;
+}
+
+#main-config-title {
+    margin-top: 40px;
 }

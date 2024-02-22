@@ -33,17 +33,39 @@ function switchLanguage(lang) {
     const tphere = document.getElementById("tphere-command");
     const vanish = document.getElementById("vanish-command");
     const warp = document.getElementById("warp-command");
+    const balance = document.getElementById("balance-command");
+    const eco = document.getElementById("eco-command");
+    const lng = document.getElementById("lng");
+    const join_message = document.getElementById("join-server");
+    const quit_message = document.getElementById("quit-server");
+    const isFeeding = document.getElementById("is-feeding");
+    const dayTime = document.getElementById("day-time");
+    const nightTime = document.getElementById("night-time");
+    const ChatModify = document.getElementById("chat-modify");
+    const LocalChatFormat = document.getElementById("local-chat-format");
+    const GlobalChatFormat = document.getElementById("global-chat-format");
+    const localChatRadius = document.getElementById("local-chat-radius");
+    const globalChatPrefix = document.getElementById("global-chat-prefix");
+    const addSpacePrefix = document.getElementById("add-space-prefix");
+    const nearRadius = document.getElementById("near-radius");
+    const nearMessageFormat = document.getElementById("near-message-format");
+    const ecoModule = document.getElementById("eco-module");
+    const homesModule = document.getElementById("homes-module");
+    const warpsModule = document.getElementById("warps-module");
+    const spawnModule = document.getElementById("spawn-module");
 
     switch (lang) {
         case 'en':
             title.textContent = 'Documentation';
             importantz.textContent = '/importantz - Main Plugin`s command';
+            balance.textContent = 'Checks Player`s balance';
             clear.textContent = '/clear - Clear Player`s inventory'
             craft.textContent = '/craft - Opens virtual crafting table'
             day.textContent = '/day - Setts day in world'
             delhome.textContent = '/delhome - Deletes a home point for the player'
             delwarp.textContent = '/delwarp - Deletes a warp'
             ec.textContent = '/enderchest - Opens Player`s ender chest';
+            eco.textContent = '/eco - Transactions using the Vault Economy';
             feed.textContent = '/feed - Feeds the player';
             fly.textContent = '/fly - Enable/Disable fly mode';
             flyspeed.textContent = '/flyspeed - Setts fly speed';
@@ -70,16 +92,36 @@ function switchLanguage(lang) {
             tphere.textContent = '/tphere - Teleport Player to yourself'
             vanish.textContent = '/vanish - Makes Player invisible';
             warp.textContent = '/warp - Teleports Player to warp';
+            lng.textContent = 'language - parameter for changing the plugin language';
+            join_message.textContent = 'join-server - changes the message when the player join on the server, if the value is "--null", then the message will not be displayed';
+            quit_message.textContent = 'quit-server - changes the message when the player quit from the server, if the value is "--null", then the message will not be displayed';
+            isFeeding.textContent = 'isFeeding - will the player be feed when executing the heal command';
+            dayTime.textContent = 'dayTime - the value for the time of day';
+            nightTime.textContent = 'nightTime - the value for the time of night';
+            ChatModify.textContent = 'ChatModify - permission to change the chat';
+            LocalChatFormat.textContent = 'LocalChatFormat - format of Local Chat';
+            GlobalChatFormat.textContent = 'GlobalChatFormat - format of Global Chat';
+            localChatRadius.textContent = 'LocalChatRadius - local chat will be active for several blocks';
+            globalChatPrefix.textContent = 'GlobalChatPrefix - the character that must be entered at the beginning of the message to send the message to the global chat';
+            addSpacePrefix.textContent = 'AddSpacePrefix - adding a space between the prefix in the chat and the player\'s nickname';
+            nearRadius.textContent = 'near:radius - the near command will be active for several blocks';
+            nearMessageFormat.textContent = 'near:message-format - the message format for the near command';
+            ecoModule.textContent = 'economy - economy module enable';
+            homesModule.textContent = 'homes - homes module enable';
+            warpsModule.textContent = 'warps - warps module enable';
+            spawnModule.textContent = 'spawn - spawn module enable';
             break;
         case 'ru':
             title.textContent = 'Документация';
             importantz.textContent = '/importantz - Главная команда плагина'
+            balance.textContent = '/balance - Проверяет баланс игрока';
             clear.textContent = '/clear - Очищает инвентарь игрока'
             craft.textContent = '/craft - Открывает виртуальный верстак'
             day.textContent = '/day - Устанавливает день в мире'
             delhome.textContent = '/delhome - Удаляет точку дома для игрока'
             delwarp.textContent = '/delwarp - Удаляет варп'
             ec.textContent = '/enderchest - Открывает эндер-сундук игрока';
+            eco.textContent = '/eco - Транзакции с использованием экономики Vault';
             feed.textContent = '/feed - Кормит игрока';
             fly.textContent = '/fly - Включить/Выключить режим полета';
             flyspeed.textContent = '/flyspeed - Устанавливает скорость полета';
@@ -106,6 +148,24 @@ function switchLanguage(lang) {
             tphere.textContent = '/tphere - Телепортировать игрока к себе';
             vanish.textContent = '/vanish - Делает игрока невидимым';
             warp.textContent = '/warp - Телепортирует игрока на варп';
+            lng.textContent = 'language - Параметр для изменения языка плагина';
+            join_message.textContent = 'join_message - изменяет сообщение, когда игрок присоединяется к серверу, если значение равно "--null", то сообщение отображаться не будет';
+            quit_message.textContent = 'quit_message - изменяет сообщение, когда игрок выходит с сервера, если значение равно "--null", то сообщение отображаться не будет';
+            isFeeding.textContent = 'isFeeding - будет ли игрок накормлен при использовании команды исцеления';
+            dayTime.textContent = 'dayTime - значение для времени дня';
+            nightTime.textContent = 'dayTime - значение для времени ночи';
+            ChatModify.textContent = 'ChatModify - разрешение для изменения чата';
+            LocalChatFormat.textContent = 'LocalChatFormat - формат локального чата';
+            GlobalChatFormat.textContent = 'GlobalChatFormat - формат глобального чата';
+            localChatRadius.textContent = 'LocalChatRadius - локальный чат будет виден в этом значении блоков';
+            globalChatPrefix.textContent = 'GlobalChatPrefix - символ, который необходимо ввести в начале сообщения, чтобы отправить сообщение в глобальный чат';
+            addSpacePrefix.textContent = 'AddSpacePrefix - добавление пробела между префиксом в чате и ником игрока';
+            nearRadius.textContent = 'near:radius - в скольки блоках будет активна команда near';
+            nearMessageFormat.textContent = 'near:message-format - формат сообщения для команды near';
+            ecoModule.textContent = 'economy - включает модуль экономики';
+            homesModule.textContent = 'homes - включает модуль точек домов';
+            warpsModule.textContent = 'warps - включает модуль варпов';
+            spawnModule.textContent = 'spawn - включает модуль точки спавна';
             break;
         default:
             break;
