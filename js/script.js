@@ -47,12 +47,16 @@ function switchLanguage(lang) {
     const localChatRadius = document.getElementById("local-chat-radius");
     const globalChatPrefix = document.getElementById("global-chat-prefix");
     const addSpacePrefix = document.getElementById("add-space-prefix");
+    const msgCmdPrefix = document.getElementById("message-cmd-prefix");
+    const bcCmdPrefix = document.getElementById("bc-cmd-prefix");
     const nearRadius = document.getElementById("near-radius");
     const nearMessageFormat = document.getElementById("near-message-format");
     const ecoModule = document.getElementById("eco-module");
     const homesModule = document.getElementById("homes-module");
     const warpsModule = document.getElementById("warps-module");
     const spawnModule = document.getElementById("spawn-module");
+    const bc = document.getElementById("broadcast-command");
+    const msg = document.getElementById("message-command");
 
     switch (lang) {
         case 'en':
@@ -104,12 +108,16 @@ function switchLanguage(lang) {
             localChatRadius.textContent = 'LocalChatRadius - local chat will be active for several blocks';
             globalChatPrefix.textContent = 'GlobalChatPrefix - the character that must be entered at the beginning of the message to send the message to the global chat';
             addSpacePrefix.textContent = 'AddSpacePrefix - adding a space between the prefix in the chat and the player\'s nickname';
+            msgCmdPrefix.textContent = 'message:msg-command-prefix - prefix for msg command';
+            bcCmdPrefix.textContent = 'broadcast:bc-command-prefix - prefix for bc command';
             nearRadius.textContent = 'near:radius - the near command will be active for several blocks';
             nearMessageFormat.textContent = 'near:message-format - the message format for the near command';
             ecoModule.textContent = 'economy - economy module enable';
             homesModule.textContent = 'homes - homes module enable';
             warpsModule.textContent = 'warps - warps module enable';
             spawnModule.textContent = 'spawn - spawn module enable';
+            bc.textContent = '/broadcast - Sends a message to all players on the server';
+            msg.textContent = '/message - Sends a message to player'
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -160,12 +168,16 @@ function switchLanguage(lang) {
             localChatRadius.textContent = 'LocalChatRadius - локальный чат будет виден в этом значении блоков';
             globalChatPrefix.textContent = 'GlobalChatPrefix - символ, который необходимо ввести в начале сообщения, чтобы отправить сообщение в глобальный чат';
             addSpacePrefix.textContent = 'AddSpacePrefix - добавление пробела между префиксом в чате и ником игрока';
+            msgCmdPrefix.textContent = 'message:msg-command-prefix - префикс для команды msg';
+            bcCmdPrefix.textContent = 'broadcast:bc-command-prefix - префикс для команды bc';
             nearRadius.textContent = 'near:radius - в скольки блоках будет активна команда near';
             nearMessageFormat.textContent = 'near:message-format - формат сообщения для команды near';
             ecoModule.textContent = 'economy - включает модуль экономики';
             homesModule.textContent = 'homes - включает модуль точек домов';
             warpsModule.textContent = 'warps - включает модуль варпов';
             spawnModule.textContent = 'spawn - включает модуль точки спавна';
+            bc.textContent = '/broadcast - Отправляет сообщение всем игрокам на сервере';
+            msg.textContent = '/message - Отправляет сообщение игроку'
             break;
         default:
             break;
