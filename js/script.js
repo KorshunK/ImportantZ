@@ -57,6 +57,8 @@ function switchLanguage(lang) {
     const spawnModule = document.getElementById("spawn-module");
     const bc = document.getElementById("broadcast-command");
     const msg = document.getElementById("message-command");
+    const kill = document.getElementById("kill-command");
+    const list = document.getElementById("list-command");
 
     switch (lang) {
         case 'en':
@@ -118,6 +120,8 @@ function switchLanguage(lang) {
             spawnModule.textContent = 'spawn - spawn module enable';
             bc.textContent = '/broadcast - Sends a message to all players on the server';
             msg.textContent = '/message - Sends a message to player'
+            list.textContent = '/list - View all players on the server';
+            kill.textContent = '/kill - Kills players';
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -178,6 +182,8 @@ function switchLanguage(lang) {
             spawnModule.textContent = 'spawn - включает модуль точки спавна';
             bc.textContent = '/broadcast - Отправляет сообщение всем игрокам на сервере';
             msg.textContent = '/message - Отправляет сообщение игроку'
+            list.textContent = '/list - Показывает всех игроков сервера';
+            kill.textContent = '/kill - Убивает игрока';
             break;
         default:
             break;
