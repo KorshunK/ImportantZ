@@ -59,6 +59,8 @@ function switchLanguage(lang) {
     const msg = document.getElementById("message-command");
     const kill = document.getElementById("kill-command");
     const list = document.getElementById("list-command");
+    const burn = document.getElementById("burn-command");
+    const ext = document.getElementById("ext-command");
 
     switch (lang) {
         case 'en':
@@ -122,6 +124,8 @@ function switchLanguage(lang) {
             msg.textContent = '/message - Sends a message to player'
             list.textContent = '/list - View all players on the server';
             kill.textContent = '/kill - Kills players';
+            burn.textContent = '/burn - Sets the Player on fire';
+            ext.textContent = '/ext - Extinguishes Player';
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -184,6 +188,8 @@ function switchLanguage(lang) {
             msg.textContent = '/message - Отправляет сообщение игроку'
             list.textContent = '/list - Показывает всех игроков сервера';
             kill.textContent = '/kill - Убивает игрока';
+            burn.textContent = '/burn - Поджигает игрока';
+            ext.textContent = '/ext - Тушит игрока';
             break;
         default:
             break;
