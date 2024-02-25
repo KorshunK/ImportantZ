@@ -61,6 +61,8 @@ function switchLanguage(lang) {
     const list = document.getElementById("list-command");
     const burn = document.getElementById("burn-command");
     const ext = document.getElementById("ext-command");
+    const sun = document.getElementById("sun-command");
+    const rain = document.getElementById("rain-command");
 
     switch (lang) {
         case 'en':
@@ -126,6 +128,8 @@ function switchLanguage(lang) {
             kill.textContent = '/kill - Kills players';
             burn.textContent = '/burn - Sets the Player on fire';
             ext.textContent = '/ext - Extinguishes Player';
+            sun.textContent = '/sun - Sets sunny weather';
+            rain.textContent = '/rain - Sets rainy weather';
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -190,6 +194,8 @@ function switchLanguage(lang) {
             kill.textContent = '/kill - Убивает игрока';
             burn.textContent = '/burn - Поджигает игрока';
             ext.textContent = '/ext - Тушит игрока';
+            sun.textContent = '/sun - Устанавливает солнечную погоду';
+            rain.textContent = '/rain Устанавливает дождливую погоду';
             break;
         default:
             break;
