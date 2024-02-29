@@ -63,6 +63,9 @@ function switchLanguage(lang) {
     const ext = document.getElementById("ext-command");
     const sun = document.getElementById("sun-command");
     const rain = document.getElementById("rain-command");
+    const maintenance = document.getElementById("maintenance-command");
+    const maintenance_enabled = document.getElementById("maintenance-enabled");
+    const maintenance_permission = document.getElementById("maintenance-join-permission");
 
     switch (lang) {
         case 'en':
@@ -130,6 +133,10 @@ function switchLanguage(lang) {
             ext.textContent = '/ext - Extinguishes Player';
             sun.textContent = '/sun - Sets sunny weather';
             rain.textContent = '/rain - Sets rainy weather';
+            maintenance.textContent = '/maintenance - Enables/Disables maintenance mode';
+            maintenance_enabled.textContent = 'maintenance:enabled - enabling the maintenance mode';
+            maintenance_permission.textContent = 'maintenance:permission - permission to join to the server during maintenance';
+
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -196,6 +203,9 @@ function switchLanguage(lang) {
             ext.textContent = '/ext - Тушит игрока';
             sun.textContent = '/sun - Устанавливает солнечную погоду';
             rain.textContent = '/rain Устанавливает дождливую погоду';
+            maintenance.textContent = '/maintenance - Включает/Выключает режим технических работ';
+            maintenance_enabled.textContent = 'maintenance:enabled - Включение режима технических работ';
+            maintenance_permission.textContent = 'maintenance:permission - Право для входа на сервер во время технических работ';
             break;
         default:
             break;
