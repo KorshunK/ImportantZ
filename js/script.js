@@ -66,6 +66,8 @@ function switchLanguage(lang) {
     const maintenance = document.getElementById("maintenance-command");
     const maintenance_enabled = document.getElementById("maintenance-enabled");
     const maintenance_permission = document.getElementById("maintenance-join-permission");
+    const god = document.getElementById("god-command");
+    const world = document.getElementById("world-command");
 
     switch (lang) {
         case 'en':
@@ -136,7 +138,8 @@ function switchLanguage(lang) {
             maintenance.textContent = '/maintenance - Enables/Disables maintenance mode';
             maintenance_enabled.textContent = 'maintenance:enabled - enabling the maintenance mode';
             maintenance_permission.textContent = 'maintenance:permission - permission to join to the server during maintenance';
-
+            god.textContent = '/god - Включает/Выключает режим бога';
+            world.textContent = '/world - Телепортирует игрока в другой мир';
             break;
         case 'ru':
             title.textContent = 'Документация';
@@ -206,6 +209,8 @@ function switchLanguage(lang) {
             maintenance.textContent = '/maintenance - Включает/Выключает режим технических работ';
             maintenance_enabled.textContent = 'maintenance:enabled - Включение режима технических работ';
             maintenance_permission.textContent = 'maintenance:permission - Право для входа на сервер во время технических работ';
+            god.textContent = '/god - Enable/Disable god mode';
+            world.textContent = '/world - Teleports Player to other world';
             break;
         default:
             break;
